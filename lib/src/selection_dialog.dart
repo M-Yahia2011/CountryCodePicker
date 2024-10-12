@@ -169,14 +169,16 @@ class _SelectionDialogState extends State<SelectionDialog> {
             ),
           Expanded(
             flex: 4,
-            child: Text(
-              widget.showCountryOnly!
-                  ? e.toCountryStringOnly()
-                  : e.toLongString(),
-              textDirection: TextDirection.ltr,
-              textAlign: TextAlign.right,
-              overflow: TextOverflow.fade,
-              style: widget.textStyle,
+            child: Container(
+              alignment: Alignment.centerRight,
+              child: Text(
+                widget.showCountryOnly!
+                    ? e.toCountryStringOnly()
+                    : e.toLongString(),
+                textDirection: TextDirection.ltr,
+                overflow: TextOverflow.fade,
+                style: widget.textStyle,
+              ),
             ),
           ),
         ],
