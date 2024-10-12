@@ -174,6 +174,7 @@ class _SelectionDialogState extends State<SelectionDialog> {
                   ? e.toCountryStringOnly()
                   : e.toLongString(),
               textDirection: TextDirection.ltr,
+              textAlign: TextAlign.right,
               overflow: TextOverflow.fade,
               style: widget.textStyle,
             ),
