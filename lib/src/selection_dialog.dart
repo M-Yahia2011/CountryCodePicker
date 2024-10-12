@@ -153,20 +153,6 @@ class _SelectionDialogState extends State<SelectionDialog> {
       child: Flex(
         direction: Axis.horizontal,
         children: <Widget>[
-          if (widget.showFlag!)
-            Flexible(
-              child: Container(
-                margin: const EdgeInsets.only(right: 16.0),
-                decoration: widget.flagDecoration,
-                clipBehavior:
-                    widget.flagDecoration == null ? Clip.none : Clip.hardEdge,
-                child: Image.asset(
-                  e.flagUri!,
-                  package: 'country_code_picker',
-                  width: widget.flagWidth,
-                ),
-              ),
-            ),
           Expanded(
             flex: 4,
             child: Container(
@@ -181,6 +167,20 @@ class _SelectionDialogState extends State<SelectionDialog> {
               ),
             ),
           ),
+          if (widget.showFlag!)
+            Flexible(
+              child: Container(
+                margin: const EdgeInsets.only(right: 16.0),
+                decoration: widget.flagDecoration,
+                clipBehavior:
+                    widget.flagDecoration == null ? Clip.none : Clip.hardEdge,
+                child: Image.asset(
+                  e.flagUri!,
+                  package: 'country_code_picker',
+                  width: widget.flagWidth,
+                ),
+              ),
+            ),
         ],
       ),
     );
