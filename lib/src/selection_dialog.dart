@@ -164,6 +164,7 @@ class _SelectionDialogState extends State<SelectionDialog> {
                 textDirection: TextDirection.ltr,
                 overflow: TextOverflow.fade,
                 style: widget.textStyle,
+                maxLines: 1,
               ),
             ),
           ),
